@@ -25,38 +25,59 @@ print(v3) # => Vector ‹0.0, 1.0›
 
 ## API
 let s by a scalar (float)
-let p, p# be instances of an n-dimensional Point
-let v, v# be instances of an n-dimensional Vector
+let p, p# be instances of Point
+let v, v# be instances of Vector
 
-Point
+Class Point
+
 	- constructor - create a Point from one or more float parameters, a tuple
 		of floats, or a list of floats
+
 	- properties:
+
 		- dimension - the dimension of the Point
+
 	- operators:
+
 		- 'p + v' addition of a Vector to a Point to get the Point at the tip of
 			the Vector if the tail of the vector is moved to the Point
+
 		- 'p1 - p2' subtraction of a Point from a Point to get the Vector between
 			the Points
+
 		- 'p1 == p2' equality (See Note 1)
+
 		- 'p1 != p2' not equality (See Note 1)
 
-Vector
+Class Vector
+
 	- constructor - create a Vector from one or more float parameters, a tuple
 		of floats, or a list of floats
+
 	- properties:
 		- dimension - the dimension of the vector
 		- magnitude - the magnitude of the vector
+
 	- operators
+
 		- 'v1 + v2' vector addition
+
 		- 'v1 - v2' vector subtraction
+
 		- 'v1 * v2' scalar aka dot product (v1 * v2 => scalar)
+
 		- 'v * s' scale vector
+
 		- 'v1 @ v2' vector aka cross product (v1 * v2 => vector) (See Note 2)
+
 		- 'v1 == v2' equality (See Note 1)
+
 		- 'v1 != v2' not equality (See Note 1)
+
 	- methods
+
 		- angle() - find the angle in radians between the vector and another vector
+
 		- normalize() - find a unit vector with the same direction as the vector
 
 ### Notes

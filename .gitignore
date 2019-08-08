@@ -7,7 +7,7 @@
 # exclude build artifacts
 build
 dist
-src/n_dimension.egg-info
+src/ndvector.egg-info
 
 # exclude test artifacts
 .tox
