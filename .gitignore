@@ -1,0 +1,14 @@
+# exclude test scratch directory
+.tox
+
+# exclude editor cruft
+.vscode
+
+# exclude build artifacts
+build
+dist
+src/n_dimension.egg-info
+
+# exclude test artifacts
+.tox
+tests/__pycache__
