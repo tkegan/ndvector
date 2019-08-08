@@ -13,6 +13,7 @@ setup(
     license='Apache License 2.0',
     description='A library for vector math in n dimensions.',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/tkegan',
     packages=find_packages('src'),
     package_dir={'': 'src'},

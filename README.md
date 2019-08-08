@@ -1,16 +1,15 @@
-# ndvector
-## About
-ndvector is yet another vector math library for Python3. Where numpy focuses
+# About
+*ndvector* is yet another vector math library for Python3. Where numpy focuses
 on everything including the kitchen sink, ndvector is intended to provide a
 simple, pythonic, object oriented API for vector math in n dimensions.
 
-## License
+# License
 Apache License 2.0 (see LICENSE)
 
-## Requirements
-python 3.5+
+# Requirements
+python >= 3.5
 
-## Usage
+# Usage
 Usage attempts to be about what you expect. Simply import the library, create
 Point and Vector objects, and do math with them.
 
@@ -23,12 +22,16 @@ v3 = v1 + v2
 print(v3) # => Vector ‹0.0, 1.0›
 ```
 
-## API
-let s by a scalar (float)
-let p, p# be instances of Point
-let v, v# be instances of Vector
+# API
+Given:
 
-Class Point
+	- s a scalar (float)
+
+	- p, p# are instances of Point
+
+	- v, v# are instances of Vector
+
+Class `Point`:
 
 	- constructor - create a Point from one or more float parameters, a tuple
 		of floats, or a list of floats
@@ -49,7 +52,7 @@ Class Point
 
 		- 'p1 != p2' not equality (See Note 1)
 
-Class Vector
+Class `Vector`:
 
 	- constructor - create a Vector from one or more float parameters, a tuple
 		of floats, or a list of floats
@@ -80,14 +83,14 @@ Class Vector
 
 		- normalize() - find a unit vector with the same direction as the vector
 
-### Notes
+## Notes
 1) testing for equality when floats are involved is tricky. n_dimension
     considers two floats to be equal if the absolute value of their
     difference is less than a certain amount; currently 0.000001 seems to
     work well. This may be refined after more testing
 2) only implemented for Vectors of dimension three (3)
 
-## Testing
+# Testing
 Testing is done using `tox` and `pytest`. See
 https://tox.readthedocs.io/en/latest/ for information about installing tox.
 Run the tests by cloning the source repository, changing into the local
@@ -99,5 +102,10 @@ cd n_dimension
 tox
 ```
 
-## To Do
-Auto generate API docs
+# To Do
+- Create better API documentation
+
+- Investigate accelerated performance by moving some functionality to compiled code but only if the pure python implementation can be kept as a fallback
+
+# Contribute
+I welcome pull requests against the GitHub repository. If extending the API, please include tests. I will not merge changes to the API until tests are in place and passing.
