@@ -14,7 +14,7 @@ setup(
     description='A library for vector math in n dimensions.',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/tkegan',
+    url='https://github.com/tkegan/ndvector',
     packages=find_packages('src'),
     package_dir={'': 'src'},
     classifiers=[
