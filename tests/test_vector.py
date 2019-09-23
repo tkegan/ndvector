@@ -12,35 +12,35 @@ import pytest
 def test_vector_creation_from_single_scalar():
     v = Vector(1.0)
     assert v.dimension == 1
-    assert v.magnitude == 1.0
-    assert 'Vector of Dimension 1' == repr(v)
-    assert 'Vector ‹1.0›' == str(v)
+    assert 0.000001 > abs(v.magnitude - 1.0)
+    assert '1.0' == str(v)
+    assert 'Vector ‹Dimension: 1 Components: 1.0›' == repr(v)
 
 
 def test_vector_creation_from_multiple_scalars():
     v = Vector(1.0, 1.0)
     assert v.dimension == 2
-    assert 0.1 > abs(v.magnitude - 1.414)
-    assert 'Vector of Dimension 2' == repr(v)
-    assert 'Vector ‹1.0, 1.0›' == str(v)
+    assert 0.001 > abs(v.magnitude - 1.414)
+    assert '1.0, 1.0' == str(v)
+    assert 'Vector ‹Dimension: 2 Components: 1.0, 1.0›' == repr(v)
 
 
 def test_vector_creation_from_tuple():
     t = (0.5, 1.2)
     v = Vector(t)
     assert v.dimension == 2
-    assert v.magnitude == 1.3
-    assert 'Vector of Dimension 2' == repr(v)
-    assert 'Vector ‹0.5, 1.2›' == str(v)
+    assert 0.000001 > abs(v.magnitude - 1.3)
+    assert '0.5, 1.2' == str(v)
+    assert 'Vector ‹Dimension: 2 Components: 0.5, 1.2›' == repr(v)
 
 
 def test_vector_from_list():
     l = [3.0, 4.0]
     v = Vector(l)
     assert v.dimension == 2
-    assert v.magnitude == 5.0
-    assert 'Vector of Dimension 2' == repr(v)
-    assert 'Vector ‹3.0, 4.0›' == str(v)
+    assert 0.000001 > abs(v.magnitude - 5.0)
+    assert '3.0, 4.0' == str(v)
+    assert 'Vector ‹Dimension: 2 Components: 3.0, 4.0›' == repr(v)
 
 
 def test_illegal_attempt_to_set_dimension():

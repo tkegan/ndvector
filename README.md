@@ -85,9 +85,9 @@ Class `Vector`:
 
 ## Notes
 1) testing for equality when floats are involved is tricky. n_dimension
-    considers two floats to be equal if the absolute value of their
-    difference is less than a certain amount; currently 0.000001 seems to
-    work well. This may be refined after more testing
+	considers two floats to be equal if the absolute value of their difference
+	is less than a certain amount; currently 0.000001 seems to work well. This
+	may be refined after more testing
 2) only implemented for Vectors of dimension three (3)
 
 # Testing

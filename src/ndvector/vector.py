@@ -37,7 +37,7 @@ class Vector():
         if 'dimension' == name:
             return len(self.components)
         elif 'magnitude':
-            # lazily calculation
+            # lazy calculation
             sum = 0
             for c in self.components:
                 sum += c**2
@@ -70,6 +70,9 @@ class Vector():
 
 
     def __add__(self, other):
+        '''
+        Add a Vector to this Vector
+        '''
         if not isinstance(other, self.__class__) or self.dimension != other.dimension:
             raise ValueError("Only Vectors of the same dimension can be added")
 
@@ -82,7 +85,7 @@ class Vector():
 
     def __sub__(self, other):
         '''
-        Subtract a vector from this vector
+        Subtract a Vector from this Vector
         '''
         if not isinstance(other, self.__class__) or self.dimension != other.dimension:
             raise ValueError("Only Vectors of the same dimension can be added")
@@ -156,11 +159,11 @@ class Vector():
 
 
     def __repr__(self):
-        return 'Vector of Dimension {}'.format(self.dimension)
+        return 'Vector ‹Dimension: {} Components: {}›'.format(self.dimension, str(self))
 
 
     def __str__(self):
         pieces = []
         for piece in self.components:
             pieces.append(str(piece))
-        return 'Vector ‹{}›'.format(", ".join(pieces))
+        return ", ".join(pieces)

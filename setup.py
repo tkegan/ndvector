@@ -7,7 +7,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name='ndvector',
-    version='1.0.0',
+    version='1.1.0',
     author='Tom Egan',
     author_email='tkegan@greenneondesign.com',
     license='Apache License 2.0',

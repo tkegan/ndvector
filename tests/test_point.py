@@ -10,31 +10,31 @@ import pytest
 def test_point_creation_from_single_scalar():
     p = Point(1.0)
     assert p.dimension == 1
-    assert 'Point of Dimension 1' == repr(p)
-    assert 'Point (1.0)' == str(p)
+    assert '1.0' == str(p)
+    assert 'Point ‹Dimension: 1 Components: 1.0›' == repr(p)
 
 
 def test_point_creation_from_multiple_scalars():
     p = Point(1.0, 2.0)
     assert p.dimension == 2
-    assert 'Point of Dimension 2' == repr(p)
-    assert 'Point (1.0, 2.0)' == str(p)
+    assert '1.0, 2.0' == str(p)
+    assert 'Point ‹Dimension: 2 Components: 1.0, 2.0›' == repr(p)
 
 
 def test_print_creation_from_tuple():
     t = (2.0, 3.0)
     p = Point(t)
     assert p.dimension == 2
-    assert 'Point of Dimension 2' == repr(p)
-    assert 'Point (2.0, 3.0)' == str(p)
+    assert '2.0, 3.0' == str(p)
+    assert 'Point ‹Dimension: 2 Components: 2.0, 3.0›' == repr(p)
 
 
 def test_point_creation_from_list():
     l = [4.0, 5.5]
     p = Point(l)
     assert p.dimension == 2
-    assert 'Point of Dimension 2' == repr(p)
-    assert 'Point (4.0, 5.5)' == str(p)
+    assert '4.0, 5.5' == str(p)
+    assert 'Point ‹Dimension: 2 Components: 4.0, 5.5›' == repr(p)
 
 
 def test_illegal_attempt_to_set_dimension():
@@ -66,5 +66,5 @@ def test_subtraction_of_a_point():
     p2 = Point(0.0, 0.0)
     v = p1 - p2
     assert v.dimension == 2
-    assert 'Vector of Dimension 2' == repr(v)
-    assert 'Vector ‹-1.0, -1.0›' == str(v)
+    assert '-1.0, -1.0' == str(v)
+    assert 'Vector ‹Dimension: 2 Components: -1.0, -1.0›' == repr(v)

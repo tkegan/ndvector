@@ -98,11 +98,11 @@ class Point():
 
 
     def __repr__(self):
-        return 'Point of Dimension {}'.format(self.dimension)
+        return 'Point ‹Dimension: {} Components: {}›'.format(self.dimension, str(self))
 
 
     def __str__(self):
         pieces = []
         for piece in self.components:
             pieces.append(str(piece))
-        return 'Point ({})'.format(", ".join(pieces))
+        return ", ".join(pieces)
