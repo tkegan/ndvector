@@ -1,8 +1,5 @@
 # -*- encoding: utf-8 -*-
 
-# Python compatibility
-from __future__ import print_function
-
 #import from module
 from .vector import Vector
 
